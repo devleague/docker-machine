@@ -1,0 +1,27 @@
+{
+  "name": "docker-machine",
+  "version": "1.0.0",
+  "description": "A Regular Description",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/nodemon ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "bookshelf": "^0.14.2",
+    "connect-redis": "^3.4.0",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "knex": "^0.13.0",
+    "nodemon": "^1.18.10",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pg": "^7.8.1"
+  }
+}
