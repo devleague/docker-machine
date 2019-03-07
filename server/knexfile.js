@@ -18,6 +18,6 @@ module.exports = {
     tableName: 'knex_migrations'
   },
   seeds: {
-    directory: './server/database/seeds'
+    directory: './database/seeds'
   }
 };
