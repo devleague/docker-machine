@@ -2,7 +2,7 @@
 
 - `docker-machine create -d amazonec2 ${machineName} --amazonec2-region us-west-1  --amazonec2-secret-key ${secretKey} --amazonec2-access-key ${accessKey}`
 - `docker-machine env ${machineName}`
-- Run eval command at the end of previous outpu
+- Run eval command at the end of previous output
 
 ### Debugging docker machine
 
@@ -15,7 +15,7 @@ To view information about docker machines on your local system:
 To view specific information about a single docker machine:
 
 - `docker-machine config ${machineName}` to view the config of a docker machine
-- `docker-machine ip ${machineName} to view the ip of a docker machine
+- `docker-machine ip ${machineName}` to view the ip of a docker machine
 - `docker-machine status ${machineName}` to view the status of a docker machine
 - `docker-machine ssh ${machineName}` to login to the ec2 instance
 
