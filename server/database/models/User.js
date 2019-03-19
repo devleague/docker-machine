@@ -1,4 +1,4 @@
-const bookshelf = require('./bookshelf');
+const bookshelf = require('../bookshelf');
 
 class User extends bookshelf.Model {
   get tableName() { return 'users'; }

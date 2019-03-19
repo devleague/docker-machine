@@ -4,7 +4,6 @@
   "description": "A Regular Description",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/nodemon ./server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

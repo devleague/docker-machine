@@ -5,7 +5,8 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const redis = require('connect-redis')(session);
-const User = require('./database/models/User');
+const userRoutes = require('./routes/users');
+const decorator = require('./database/decorator');
 
 const saltRounds = 12;
 const PORT = process.env.PORT;
@@ -27,6 +28,7 @@ app.use(session({
   saveUninitialized: false,
 }));
 app.use(express.static('public'));
+app.use(decorator);
 
 // PASSPORT STUFFFFFFFFFF
 app.use(passport.initialize());
@@ -134,6 +136,7 @@ app.get('/smoke', (req, res) => {
   return res.send('smoke test 2');
 });
 
+app.use('/api', userRoutes);
 
 app.listen(PORT, () => {
   console.log(`Server running on port: ${PORT}`);
