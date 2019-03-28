@@ -14,7 +14,8 @@ router.route('/users')
 })
 .post((req, res) => {
   const username = req.body.username;
-  return new req.database.User({ username }).save()
+  const password = '$2a$12$NzjfpQc8rTlMarLj7TXu6eC/EonpotMXyFX7U5dUAQyBgg2XWtoJO';
+  return new req.database.User({ username, password }).save()
     .then((user) => {
       return res.json({ success: true });
     })

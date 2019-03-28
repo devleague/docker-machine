@@ -9,6 +9,9 @@ services:
     volumes:
       - ".:/src/app"
     env_file: .env
+    environment:
+      - POSTGRES_HOSTNAME=postgres-primary-db
+      - REDIS_HOSTNAME=redis://redis-server:6379
     ports:
       - "${EXPRESS_HOST_PORT}:${EXPRESS_CONTAINER_PORT}"
     networks:

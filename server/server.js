@@ -5,6 +5,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const bcrypt = require('bcryptjs');
 const redis = require('connect-redis')(session);
+const User = require('./database/models/User');
 const userRoutes = require('./routes/users');
 const decorator = require('./database/decorator');
 
@@ -27,7 +28,7 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }));
-app.use(express.static('public'));
+app.use(express.static('server/public'));
 app.use(decorator);
 
 // PASSPORT STUFFFFFFFFFF
@@ -97,10 +98,7 @@ app.post('/register', (req, res) => {
         password: hash
       })
       .save()
-      .then((user) => {
-        console.log(user);
-        res.redirect('/login.html');
-      })
+      .then((user) => { res.redirect('/login.html'); })
       .catch((err) => {
         console.log(err);
         return res.send('Error Creating account');
