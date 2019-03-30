@@ -158,8 +158,8 @@ aws elasticache delete-cache-cluster --cache-cluster-id ${machineName}
 ## Major Changes
 
 - Update docker-compose.override.yml
- - Add POSTGRES_HOSTNAME to environment
- - Add REDIS_HOSTNAME to environment
+  - Add POSTGRES_HOSTNAME to environment
+  - Add REDIS_HOSTNAME to environment
 - Update docker-compose.prod.yml
- - Remove postgres-primary-db
- - Remove redis-server
+  - Remove postgres-primary-db
+  - Remove redis-server
